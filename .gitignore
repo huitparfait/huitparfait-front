@@ -13,3 +13,7 @@ huitparfait-data/data
 dist
 
 *.log
+
+.DS_Store
+test/unit/coverage
+test/e2e/reports
