@@ -28,7 +28,18 @@ export function fetchGroupRanking(groupId, page = 1) {
     return execute(`/ranking/${groupId}?page=${page}`)
 }
 
-export function upsertGroup({ id, name, avatarUrl }) {
+export function createGroup({ name, avatarUrl }) {
+
+  const body = { name }
+
+  if (_.startsWith(avatarUrl, 'https://')) {
+    body.avatarUrl = avatarUrl
+  }
+
+  return execute('/groups', { method: 'POST', body })
+}
+
+export function updateGroup({ id, name, avatarUrl }) {
 
     const body = { name }
 

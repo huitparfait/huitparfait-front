@@ -2,7 +2,8 @@ import {
     fetchUserGroups as apiFetchUserGroups,
     fetchGroup as apiFetchGroup,
     fetchGroupUsers as apiFetchGroupUsers,
-    upsertGroup as apiUpsertGroup,
+    createGroup as apiCreateGroup,
+    updateGroup as apiUpdateGroup,
     deleteGroup as apiDeleteGroup,
 } from '../../WebApi'
 
@@ -112,38 +113,73 @@ export function fetchGroupUsers(groupId) {
     }
 }
 
-export const UPSERT_GROUP = 'UPSERT_GROUP'
-function upsertGroupAttempt(group) {
+export const CREATE_GROUP = 'CREATE_GROUP'
+function createGroupAttempt(group) {
+  return {
+    type: CREATE_GROUP,
+    group,
+  }
+}
+
+export const CREATE_GROUP_SUCCESS = 'CREATE_GROUP_SUCCESS'
+function createGroupSuccess(group) {
+  return {
+    type: CREATE_GROUP_SUCCESS,
+    group,
+  }
+}
+
+export const CREATE_GROUP_FAILURE = 'CREATE_GROUP_FAILURE'
+function createGroupFailure() {
+  return {
+    type: CREATE_GROUP_FAILURE,
+  }
+}
+
+export function createGroup(group) {
+
+  return (dispatch) => {
+
+    dispatch(createGroupAttempt(group))
+
+    return apiCreateGroup(group)
+      .then((createdGroup) => dispatch(createGroupSuccess(createdGroup)))
+      .catch(() => dispatch(createGroupFailure()))
+  }
+}
+
+export const UPDATE_GROUP = 'UPDATE_GROUP'
+function updateGroupAttempt(group) {
     return {
-        type: UPSERT_GROUP,
+        type: UPDATE_GROUP,
         group,
     }
 }
 
-export const UPSERT_GROUP_SUCCESS = 'UPSERT_GROUP_SUCCESS'
-function upsertGroupSuccess(group) {
+export const UPDATE_GROUP_SUCCESS = 'UPDATE_GROUP_SUCCESS'
+function updateGroupSuccess(group) {
     return {
-        type: UPSERT_GROUP_SUCCESS,
+        type: UPDATE_GROUP_SUCCESS,
         group,
     }
 }
 
-export const UPSERT_GROUP_FAILURE = 'UPSERT_GROUP_FAILURE'
-function upsertGroupFailure() {
+export const UPDATE_GROUP_FAILURE = 'UPDATE_GROUP_FAILURE'
+function updateGroupFailure() {
     return {
-        type: UPSERT_GROUP_FAILURE,
+        type: UPDATE_GROUP_FAILURE,
     }
 }
 
-export function upsertGroup(group) {
+export function updateGroup(group) {
 
     return (dispatch) => {
 
-        dispatch(upsertGroupAttempt(group))
+        dispatch(updateGroupAttempt(group))
 
-        return apiUpsertGroup(group)
-            .then((upsertedGroup) => dispatch(upsertGroupSuccess(upsertedGroup)))
-            .catch(() => dispatch(upsertGroupFailure()))
+        return apiUpdateGroup(group)
+            .then((updatedGroup) => dispatch(updateGroupSuccess(updatedGroup)))
+            .catch(() => dispatch(updateGroupFailure()))
     }
 }
 

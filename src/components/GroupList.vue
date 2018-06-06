@@ -63,13 +63,11 @@
 
     import Group from './Group'
     import store from '../state/configureStore'
-    import { fetchUserGroups, upsertGroup } from '../state/actions/groups'
-    import shortid from 'shortid'
+    import { fetchUserGroups, createGroup } from '../state/actions/groups'
     import _ from 'lodash'
 
     function getNewGroup() {
         return {
-            id: shortid.generate(),
             name: null,
             avatarUrl: null,
         }
@@ -105,7 +103,7 @@
                 this.createGroupInPogress = true
                 const newGroup = this.newGroup
 
-                store.dispatch(upsertGroup(newGroup))
+                store.dispatch(createGroup(newGroup))
                         .then((foo) => {
                             this.createGroupInPogress = false
                             if (foo.group != null) {

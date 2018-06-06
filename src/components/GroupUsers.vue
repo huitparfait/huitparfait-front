@@ -41,7 +41,7 @@
     import Group from './Group'
     import GroupPlayer from './GroupPlayer'
     import store from '../state/configureStore'
-    import { fetchGroup, fetchGroupUsers, upsertGroup } from '../state/actions/groups'
+    import { fetchGroup, fetchGroupUsers, updateGroup } from '../state/actions/groups'
     import router from '../router'
 
     export default {
@@ -94,7 +94,7 @@
                     ...this.groupEdit,
                 }
 
-                store.dispatch(upsertGroup(updatedGroup))
+                store.dispatch(updateGroup(updatedGroup))
                         .then(() => {
                             this.updateGroupInPogress = false
                         })

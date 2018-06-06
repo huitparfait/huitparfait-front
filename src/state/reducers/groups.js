@@ -2,8 +2,8 @@ import _ from 'lodash'
 import {
     FETCH_USER_GROUPS_SUCCESS,
     FETCH_USER_GROUPS_FAILURE,
-    UPSERT_GROUP_SUCCESS,
-    UPSERT_GROUP_FAILURE,
+    UPDATE_GROUP_SUCCESS,
+    UPDATE_GROUP_FAILURE,
     DELETE_GROUP,
     DELETE_GROUP_FAILURE,
 } from '../actions/groups'
@@ -20,7 +20,7 @@ export default function (state = initialState, action) {
         case FETCH_USER_GROUPS_FAILURE:
             return []
 
-        case UPSERT_GROUP_SUCCESS:
+        case UPDATE_GROUP_SUCCESS:
             return _.sortBy([
                 ...state.filter((group) => {
                     return group.id !== action.group.id
@@ -28,7 +28,7 @@ export default function (state = initialState, action) {
                 action.group,
             ], (group) => group.name.toLowerCase())
 
-        case UPSERT_GROUP_FAILURE:
+        case UPDATE_GROUP_FAILURE:
             return state.filter((group) => {
                 return group.id !== action.group.id
             })
