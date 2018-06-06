@@ -73,7 +73,6 @@ function execute(url, opts = {}) {
     }
     const csrfToken = cookie.parse(document.cookie).csrf
     const config = Object.assign({}, opts, {
-        credentials: 'include',
         headers: {
             'Accept': 'application/json',
             'Content-Type': 'application/json',
