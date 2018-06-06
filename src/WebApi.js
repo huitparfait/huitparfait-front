@@ -1,5 +1,6 @@
 import _ from 'lodash'
 import fetchPonyfill from 'fetch-ponyfill'
+import cookie from 'cookie'
 
 const fetch = fetchPonyfill()
 
@@ -70,11 +71,13 @@ function execute(url, opts = {}) {
     if (opts.body) {
         opts.body = JSON.stringify(opts.body)
     }
+    const csrfToken = cookie.parse(document.cookie).csrf
     const config = Object.assign({}, opts, {
         credentials: 'include',
         headers: {
             'Accept': 'application/json',
             'Content-Type': 'application/json',
+            'x-csrf': csrfToken,
         },
     })
 
