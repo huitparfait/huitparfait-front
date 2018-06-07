@@ -35,70 +35,70 @@ export default {
 
 <style scoped>
 
-.user {
-  position: relative;
-  overflow: hidden;
-}
+    .user {
+        position: relative;
+        overflow: hidden;
+    }
 
-@supports (flex-wrap: wrap) {
-  .user {
-    align-items: flex-start;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-end;
-  }
-}
+    @supports (flex-wrap: wrap) {
+        .user {
+            align-items: flex-start;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+        }
+    }
 
-.details {
-  align-items: center;
-  display: flex;
-  flex: 1 1 250px;
-  text-decoration: none;
-}
+    .details {
+        align-items: center;
+        display: flex;
+        flex: 1 1 250px;
+        text-decoration: none;
+    }
 
-.avatar--wrapper {
-  align-self: flex-start;
-  border-radius: 3px;
-  flex-shrink: 0;
-  height: 60px;
-  margin-right: 15px;
-  overflow: hidden;
-  width: 60px;
-}
+    .avatar--wrapper {
+        align-self: flex-start;
+        border-radius: 3px;
+        flex-shrink: 0;
+        height: 60px;
+        margin-right: 15px;
+        overflow: hidden;
+        width: 60px;
+    }
 
-@media (min-width: 500px) {
-  .avatar--wrapper {
-    height: 70px;
-    width: 70px;
-  }
-}
+    @media (min-width: 500px) {
+        .avatar--wrapper {
+            height: 70px;
+            width: 70px;
+        }
+    }
 
-.avatar {
-  display: block;
-  height: 100%;
-  object-fit: cover;
-  width: 100%;
-}
+    .avatar {
+        display: block;
+        height: 100%;
+        object-fit: cover;
+        width: 100%;
+    }
 
-.infos {
-  flex: 1 1 auto;
-}
+    .infos {
+        flex: 1 1 auto;
+    }
 
-.name {
-  color: #333;
-  font-size: 18px;
-  font-weight: bold;
-}
+    .name {
+        color: #333;
+        font-size: 18px;
+        font-weight: bold;
+    }
 
-.anonymousName {
-  font-style: italic;
-}
+    .anonymousName {
+        font-style: italic;
+    }
 
-.btnBar {
-  align-self: flex-end;
-  margin-left: 10px;
-  margin-top: 10px;
-  text-align: right;
-}
+    .btnBar {
+        align-self: flex-end;
+        margin-left: 10px;
+        margin-top: 10px;
+        text-align: right;
+    }
 
 </style>

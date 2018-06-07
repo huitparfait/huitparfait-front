@@ -135,6 +135,15 @@
         </card>
 
         <card>
+            <h2 class="card-title">Hébergement</h2>
+            <p>
+                <strong>Huit Parfait</strong> est gracieusement hébergé et automatisé chez <a href="https://www.clever-cloud.com/" target="_blank">Clever Cloud</a>.
+                Sur cette plateforme, nous avons pu déployer automatiquement nos 3 applications <strong>node.js</strong>, notre cache <strong>Redis</strong> et notre base de données <strong>PostgreSQL</strong>.
+                <img class="clever-cloud-logo" src="../assets/clever-cloud.svg" alt="Clever Cloud Logo">
+            </p>
+        </card>
+
+        <card>
             <h2 class="card-title">À propos du site</h2>
             <p>
                 <strong>Huit Parfait</strong> est un site éphémère qui revient tous les 2 ans depuis 2014.
@@ -311,6 +320,12 @@
         color: #49996f;
         font-weight: bold;
         white-space: nowrap;
+    }
+
+    .clever-cloud-logo {
+        display: block;
+        height: 50px;
+        margin-top: 15px;
     }
 
 </style>
