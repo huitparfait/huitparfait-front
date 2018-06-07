@@ -25,7 +25,7 @@ export function fetchGroupUsers(groupId) {
 }
 
 export function fetchGroupRanking(groupId, page = 1) {
-    return execute(`/ranking/${groupId}?page=${page}`)
+    return execute(`/rankings/${groupId}?page=${page}`)
 }
 
 export function createGroup({ name, avatarUrl }) {
@@ -67,7 +67,7 @@ export function joinGroup(groupId) {
 }
 
 export function fetchRanking() {
-    return execute('/ranking')
+    return execute('/rankings')
 }
 
 export function fetchPredictions(period) {

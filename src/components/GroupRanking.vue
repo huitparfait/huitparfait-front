@@ -2,8 +2,8 @@
 
     <div class="page--groupRanking">
 
-        <card-title v-if="group != null && group.id != 'general'">Classement de <em>{{ group.name }}</em>&nbsp;</card-title>
-        <card-title v-else>Classement général</em>&nbsp;</card-title>
+        <card-title v-if="group != null && group.id != 'general'">Classement de <em>{{ group.name }}</em></card-title>
+        <card-title v-else><em>Classement général</em></card-title>
 
         <ranked-player v-for="rankedPlayer in groupRanking.ranking" :ranked-player="rankedPlayer"></ranked-player>
 
