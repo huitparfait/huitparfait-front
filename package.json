@@ -7,6 +7,8 @@
   "scripts": {
     "dev": "node build/dev-server.js",
     "build": "node build/build.js",
+    "postinstall": "npm run build",
+    "start": "node server/start-app.js",
     "unit": "karma start test/unit/karma.conf.js --single-run",
     "e2e": "node test/e2e/runner.js",
     "test": "npm run unit && npm run e2e",
@@ -14,9 +16,12 @@
   },
   "dependencies": {
     "babel-runtime": "^6.0.0",
+    "convict": "^4.3.0",
     "cookie": "^0.3.1",
     "eslint-plugin-html": "1.5.1",
     "fetch-ponyfill": "1.0.0",
+    "hapi": "^17.5.1",
+    "inert": "^5.1.0",
     "lodash": "4.13.1",
     "moment": "2.13.0",
     "redux": "^3.5.2",
