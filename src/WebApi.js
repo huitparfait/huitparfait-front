@@ -82,7 +82,8 @@ function execute(url, opts = {}) {
     if (opts.body) {
         opts.body = JSON.stringify(opts.body)
     }
-    const csrfToken = cookie.parse(document.cookie).csrf
+    const cookies = cookie.parse(document.cookie);
+    const csrfToken = cookies['__Host-csrf'] || cookies.csrf;
     const config = Object.assign({}, opts, {
         headers: {
             'Accept': 'application/json',
