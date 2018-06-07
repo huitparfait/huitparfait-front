@@ -96,14 +96,14 @@
             Une risquette vous permet de "risquer" des points sur un fait de match prédéfini.
         </p>
         <p>
-            Par exemple, pour le match "France - Roumanie", on vous propose une affirmation telle que
+            Par exemple, pour le match "France - Australie", on vous propose une affirmation telle que
             <strong>But du pied gauche</strong>.
             À vous de pronostiquer si cette risquette sera VRAIE ou FAUSSE. Vous pouvez risquer de 1 à 3 points.
             Si à la fin du match vous aviez raison, vous gagnez les points risqués, dans le cas contraire vous perdez
             les points (et votre honneur).
         </p>
         <p>
-            Si vous ne vous sentez pas l'âme d'un aventurier vous pouvez choisir de ne rien risquer.
+            Si vous ne vous sentez pas l'âme d'un aventurier, vous pouvez choisir de ne rien risquer.
         </p>
     </card>
 
@@ -116,26 +116,41 @@
             </p>
             <p>
                 L'éventuelle séance de tirs au but n'est pas comptée pour comparer le score à votre pronostic.
-                Par exemple, le match "France&nbsp;-&nbsp;Suisse" se termine avec
-                <strong>1&nbsp;-&nbsp;1</strong> à la fin des prolongations et la Suisse gagne la séance de tirs au but
+                Par exemple, le match "France&nbsp;-&nbsp;Brésil" se termine avec
+                <strong>1&nbsp;-&nbsp;1</strong> à la fin des prolongations et le Brésil gagne la séance de tirs au but
                 <strong>3&nbsp;-&nbsp;2</strong>.
             </p>
             <ul>
                 <li>
                     Si vous pronostiquez <strong>0&nbsp;-&nbsp;0</strong>, <strong>1&nbsp;-&nbsp;1</strong>,
-                    <strong>2&nbsp;-&nbsp;2</strong>... vous avez les 3 points pour <em>"issue du match trouvé"</em>.
+                    <strong>2&nbsp;-&nbsp;2</strong>... vous avez les 3 points pour <em>"issue du match trouvée"</em>.
                 </li>
                 <li>
                     Si vous pronostiquez
-                    <strong>2&nbsp;-&nbsp;1</strong> pour la Suisse, même si celle-ci a gagnée le match aux tirs au but,
+                    <strong>2&nbsp;-&nbsp;1</strong> pour le Brésil, même si celui-ci a gagné le match aux tirs au but,
                     vous n'avez pas les 3 points pour
-                    <em>"issue du match trouvé"</em>.
+                    <em>"issue du match trouvée"</em>.
                 </li>
             </ul>
         </card>
 
         <card>
             <h2 class="card-title">À propos du site</h2>
+            <p>
+                <strong>Huit Parfait</strong> est un site éphémère qui revient tous les 2 ans depuis 2014.
+                Cette année, les développements sont assurés par <a href="https://twitter.com/hsablonniere" target="_blank">Hubert Sablonnière</a> et <a href="https://twitter.com/mghignet" target="_blank">Maxime Ghignet</a>.
+            </p>
+            <h3>Vie privée</h3>
+            <p>
+                Afin de respecter au mieux votre vie privée et aussi parce-que votre email, date de naissance et opinions politiques, <em>on s'en ****</em>, nous avons décidé de stocker le strict minimum dans notre base de données.
+            </p>
+            <p>
+                Nous récupérons et stockons votre avatar et votre "nom prénom" depuis le réseau social utilisé pour la connexion, libre à vous d'éditer ces informations dans votre profil.
+                Par défaut, ce "nom prénom" sera uniquement visible par vos amis (joueurs présents dans les mêmes groupes que vous).
+                Dans le classement général (visible par tous les joueurs), vous apparaîtrez avec un avatar et pseudo anonyme comme "Escargot fou" ou "Lièvre sympa".
+                Si vous êtes un dieu ou une déesse du prono, peut-être voudriez vous apparaître publiquement dans le classement général en désactivant ce mode anonyme.
+            </p>
+            <h3>Remarques et questions</h3>
             <p>
                 Si vous avez la moindre remarque ou question sur le site, les règles etc... n'hésitez pas à contacter
                 l'équipe.
@@ -153,7 +168,7 @@
             <p class="btnBar">
                 <link-btn href="mailto:huitparfait@gmail.com">huitparfait@gmail.com</link-btn>
                 <link-btn href="https://twitter.com/huitparfait">@huitparfait</link-btn>
-                <link-btn href="https://github.com/huitparfait/huitparfait/">Github</link-btn>
+                <link-btn href="https://github.com/huitparfait">Github</link-btn>
             </p>
         </card>
     </div>
