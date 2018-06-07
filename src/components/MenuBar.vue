@@ -6,19 +6,6 @@
             <img class="menuitem-icon menuitem-icon--green" src="../assets/rankings-green.svg" alt="">
             <span class="menuitem-label">Classements</span>
         </a>
-        <div class="menuitem menuitem-category" @click="togglePredictionsSubmenu">
-            <img class="menuitem-icon menuitem-icon--white" src="../assets/predictions.svg" alt="">
-            <img class="menuitem-icon menuitem-icon--green" src="../assets/predictions-green.svg" alt="">
-            <span class="menuitem-label">Pronostics</span>
-        </div>
-        <div class="sub-menubar" :class="{ 'visible': submenu.predictions }">
-            <a class="sub-menuitem" v-link="{ name: 'predictions', activeClass: 'sub-menuitem--active', params: { period: 'matchs-precedents' } }">
-                Matchs précédents
-            </a>
-            <a class="sub-menuitem" v-link="{ name: 'predictions', activeClass: 'sub-menuitem--active', params: { period: 'prochains-matchs' } }">
-                Prochains matchs
-            </a>
-        </div>
         <a class="menuitem" v-link="{ name: 'groupList', activeClass: 'menuitem--active' }">
             <img class="menuitem-icon menuitem-icon--white" src="../assets/groups.svg" alt="">
             <img class="menuitem-icon menuitem-icon--green" src="../assets/groups-green.svg" alt="">

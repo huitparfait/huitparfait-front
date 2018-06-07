@@ -32,10 +32,6 @@ router.map({
         name: 'groupRanking',
         component: GroupRanking,
     },
-    '/pronostics/:period': {
-        name: 'predictions',
-        component: Predictions,
-    },
     '/groupes': {
         name: 'groupList',
         component: GroupList,
