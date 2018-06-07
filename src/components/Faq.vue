@@ -25,7 +25,7 @@
                 <p class="card--login-allBtn">
                     <a class="loginBtn loginBtn--facebook" href="/auth/facebook">avec Facebook</a>
                     <a class="loginBtn loginBtn--google" href="/auth/google">avec Google</a>
-                    <a class="loginBtn loginBtn--yahoo" href="/auth/yahoo">avec Yahoo</a>
+                    <a class="loginBtn loginBtn--twitter" href="/auth/twitter">avec Twitter</a>
                 </p>
             </card>
         </card-list>
@@ -244,7 +244,7 @@
     .loginBtn--facebook {
         background-color: #3b5998;
         border-color: #2c4370;
-        background-image: url(../assets/facebook.svg);
+        background-image: url(../assets/koobecaf.svg);
     }
 
     .loginBtn--google {
@@ -253,10 +253,10 @@
         background-image: url(../assets/google.svg);
     }
 
-    .loginBtn--yahoo {
-        background-color: #6e329d;
-        border-color: #512675;
-        background-image: url(../assets/yahoo.svg);
+    .loginBtn--twitter {
+        background-color: #1da1f2;
+        border-color: #1c90dc;
+        background-image: url(../assets/rettiwt.svg);
     }
 
     .contactBtn {
