@@ -12,7 +12,7 @@
             </div>
         </div>
         <div class="btnBar">
-            <link-btn href="/auth/logout">Se déconnecter</link-btn>
+            <btn @click="logout">Se déconnecter</btn>
         </div>
     </card>
 
@@ -20,9 +20,16 @@
 
 <script type="text/babel">
 
-    export default {
-        props: ['user'],
-    }
+import { logout } from '../WebApi'
+
+export default {
+  props: ['user'],
+  methods: {
+    logout () {
+      logout()
+    },
+  },
+}
 
 </script>
 

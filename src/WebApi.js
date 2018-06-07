@@ -78,23 +78,41 @@ export function savePrediction(newPrediction) {
     return execute('/users/me/predictions', { method: 'POST', body: newPrediction })
 }
 
+export function logout () {
+  return fetch('/auth/logout', {
+    method: 'POST',
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json',
+      'x-csrf': getCsrfToken(),
+    },
+  })
+    .then(() => {
+      location.href = '/'
+    })
+}
+
 function execute(url, opts = {}) {
     if (opts.body) {
         opts.body = JSON.stringify(opts.body)
     }
-    const cookies = cookie.parse(document.cookie);
-    const csrfToken = cookies['__Host-csrf'] || cookies.csrf;
     const config = Object.assign({}, opts, {
         headers: {
             'Accept': 'application/json',
             'Content-Type': 'application/json',
-            'x-csrf': csrfToken,
+            'x-csrf': getCsrfToken(),
         },
     })
 
     return fetch(process.env.API_URL + url, config)
         .then(checkStatus)
         .then(parseJSON)
+}
+
+function getCsrfToken() {
+  const cookies = cookie.parse(document.cookie);
+  const csrfToken = cookies['__Host-csrf'] || cookies.csrf;
+  return csrfToken
 }
 
 function parseJSON(response) {

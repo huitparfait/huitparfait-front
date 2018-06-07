@@ -25,7 +25,7 @@
                 <p class="card--login-allBtn">
                     <a class="loginBtn loginBtn--facebook" href="/auth/facebook">avec Facebook</a>
                     <a class="loginBtn loginBtn--google" href="/auth/google">avec Google</a>
-                    <a class="loginBtn loginBtn--yahoo" href="/auth/yahoo">avec Yahoo</a>
+                    <a class="loginBtn loginBtn--twitter" href="/auth/twitter">avec Twitter</a>
                 </p>
             </card>
         </card-list>
@@ -132,6 +132,15 @@
                     <em>"issue du match trouvée"</em>.
                 </li>
             </ul>
+        </card>
+
+        <card>
+            <h2 class="card-title">Hébergement</h2>
+            <p>
+                <strong>Huit Parfait</strong> est gracieusement hébergé et automatisé chez <a href="https://www.clever-cloud.com/" target="_blank">Clever Cloud</a>.
+                Sur cette plateforme, nous avons pu déployer automatiquement nos 3 applications <strong>node.js</strong>, notre cache <strong>Redis</strong> et notre base de données <strong>PostgreSQL</strong>.
+                <img class="clever-cloud-logo" src="../assets/clever-cloud.svg" alt="Clever Cloud Logo">
+            </p>
         </card>
 
         <card>
@@ -244,7 +253,7 @@
     .loginBtn--facebook {
         background-color: #3b5998;
         border-color: #2c4370;
-        background-image: url(../assets/facebook.svg);
+        background-image: url(../assets/koobecaf.svg);
     }
 
     .loginBtn--google {
@@ -253,10 +262,10 @@
         background-image: url(../assets/google.svg);
     }
 
-    .loginBtn--yahoo {
-        background-color: #6e329d;
-        border-color: #512675;
-        background-image: url(../assets/yahoo.svg);
+    .loginBtn--twitter {
+        background-color: #1da1f2;
+        border-color: #1c90dc;
+        background-image: url(../assets/rettiwt.svg);
     }
 
     .contactBtn {
@@ -311,6 +320,12 @@
         color: #49996f;
         font-weight: bold;
         white-space: nowrap;
+    }
+
+    .clever-cloud-logo {
+        display: block;
+        height: 50px;
+        margin-top: 15px;
     }
 
 </style>
