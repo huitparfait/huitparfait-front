@@ -21,11 +21,9 @@
 
                     <div class="game-teams">
                         <div class="game-teams-section">
-                            <img v-if="game.countryCodeTeamA" class="flag"
-                                    :src="'/static/flags/' + game.countryCodeTeamA + '.svg'"/>
-                            <img v-if="!game.countryCodeTeamA" class="flag unknownTeam"
-                                    src="../assets/unknown-team.svg"/>
-                            <div class="game-countryName">{{* game.countryNameTeamA}}</div>
+                            <img v-if="game.codeTeamA" class="flag" :src="'/static/flags/' + game.codeTeamA + '.svg'"/>
+                            <img v-if="!game.codeTeamA" class="flag unknownTeam" src="../assets/unknown-team.svg">
+                            <div class="game-countryName">{{* game.nameTeamA}}</div>
                         </div>
                         <div class="game-teams-section">
                             <div v-if="hasScore(game) && isResultPublishable(game)"
@@ -37,11 +35,9 @@
                             <div v-if="!hasScore(game) || !isResultPublishable(game)" class="game-time">{{* game.startsAt | time}}</div>
                         </div>
                         <div class="game-teams-section">
-                            <img v-if="game.countryCodeTeamB" class="flag"
-                                    :src="'/static/flags/' + game.countryCodeTeamB + '.svg'"/>
-                            <img v-if="!game.countryCodeTeamB" class="flag unknownTeam"
-                                    src="../assets/unknown-team.svg"/>
-                            <div class="game-countryName">{{* game.countryNameTeamB}}</div>
+                            <img v-if="game.codeTeamB" class="flag" :src="'/static/flags/' + game.codeTeamB + '.svg'"/>
+                            <img v-if="!game.codeTeamB" class="flag unknownTeam" src="../assets/unknown-team.svg">
+                            <div class="game-countryName">{{* game.nameTeamB}}</div>
                         </div>
                     </div>
 
