@@ -238,10 +238,12 @@
             },
             predictionIsValid: function (game) {
                 // Wrong value types in fields
-                if (isNaN(game.predictionRiskAmount) || game.predictionRiskAmount <= 0 ||
-                        isNaN(game.predictionScoreTeamA) || game.predictionScoreTeamA < 0 ||
-                        isNaN(game.predictionScoreTeamB) || game.predictionScoreTeamB < 0
-                ) {
+                if (!_.isInteger(parseInt(game.predictionRiskAmount))
+                  || game.predictionRiskAmount <= 0
+                  || !_.isInteger(parseInt(game.predictionScoreTeamA))
+                  || game.predictionScoreTeamA < 0
+                  || !_.isInteger(parseInt(game.predictionScoreTeamB))
+                  || game.predictionScoreTeamB < 0) {
                     return false
                 }
 
