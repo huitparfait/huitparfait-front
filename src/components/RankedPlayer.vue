@@ -10,7 +10,7 @@
         <div class="namesAndDetails">
             <div class="names">
                 <div class="name">{{ rankedPlayer.user.name }}</div>
-                <div class="anonymousName">{{ rankedPlayer.user.anonymousName }}</div>
+                <div class="anonymousName" v-if="rankedPlayer.user.anonymousName != null">{{ rankedPlayer.user.anonymousName }}</div>
             </div>
             <div class="details">
                 <div class="scorePronos">
