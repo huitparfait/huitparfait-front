@@ -7,8 +7,11 @@
                 <img class="avatar" :src="rankedPlayer.user.avatarUrl">
             </div>
         </div>
-        <div class="nameDetails">
-            <div class="name">{{ rankedPlayer.user.name }}</div>
+        <div class="namesAndDetails">
+            <div class="names">
+                <div class="name">{{ rankedPlayer.user.name }}</div>
+                <div class="anonymousName">{{ rankedPlayer.user.anonymousName }}</div>
+            </div>
             <div class="details">
                 <div class="scorePronos">
                     <span class="score"><strong>{{ rankedPlayer.stats.totalScore }}</strong>{{ rankedPlayer.stats.totalScore | frenchPlural 'pt' }}</span>
@@ -81,7 +84,7 @@
         .ranking {
             margin-bottom: 0;
             text-align: right;
-            width: 80px;
+            width: 70px;
         }
     }
 
@@ -106,14 +109,27 @@
         width: 100%;
     }
 
-    .nameDetails {
+    .namesAndDetails{
         overflow: hidden;
     }
 
     @media (min-width: 700px) {
-        .nameDetails {
+        .namesAndDetails{
             display: flex;
             flex: 1 1 0;
+        }
+    }
+
+    .names {
+        margin-bottom: 5px;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+
+    @media (min-width: 700px) {
+        .names {
+            flex: 1 1 0;
+            margin-bottom: 0;
         }
     }
 
@@ -121,19 +137,24 @@
         color: #333;
         font-size: 16px;
         font-weight: bold;
-        margin-bottom: 5px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .anonymousName {
+        color: #777;
+        font-size: 14px;
+        font-style: italic;
+        font-weight: normal;
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
     }
 
     @media (min-width: 700px) {
-        .name {
-            flex: 1 1 0;
+        .anonymousName {
             margin-bottom: 0;
-            overflow: visible;
-            text-overflow: ellipsis;
-            white-space: normal;
         }
     }
 

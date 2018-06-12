@@ -71,7 +71,7 @@
         display: flex;
     }
 
-    @media (min-width: 850px) {
+    @media (min-width: 900px) {
         .main-menubar {
             background: #f9f9f9;
         }
@@ -91,7 +91,7 @@
         z-index: 3;
     }
 
-    @media (min-width: 850px) {
+    @media (min-width: 900px) {
         .menuitem {
             background: #f9f9f9;
             flex: 0 0 auto;
@@ -106,7 +106,7 @@
         background-color: #4baf81;
     }
 
-    @media (min-width: 850px) {
+    @media (min-width: 900px) {
         .menuitem:hover {
             background-color: #eee;
         }
@@ -120,7 +120,7 @@
         background-color: #49996f;
     }
 
-    @media (min-width: 850px) {
+    @media (min-width: 900px) {
         .menuitem.menuitem--active {
             background-color: #eee;
             border-right: 3px solid #4db788;
@@ -144,7 +144,7 @@
         }
     }
 
-    @media (min-width: 850px) {
+    @media (min-width: 900px) {
         .menuitem-icon {
             margin: 0 15px;
             height: 30px;
@@ -176,7 +176,7 @@
         }
     }
 
-    @media (min-width: 850px) {
+    @media (min-width: 900px) {
         .menuitem-label {
             color: #49996f;
             flex: 1 1 0;
@@ -212,7 +212,7 @@
         }
     }
 
-    @media (min-width: 850px) {
+    @media (min-width: 900px) {
         .sub-menubar {
             background-color: transparent;
             position: static;
@@ -237,7 +237,7 @@
         text-decoration: none;
     }
 
-    @media (min-width: 850px) {
+    @media (min-width: 900px) {
         .sub-menuitem {
             border: none;
             color: #777;

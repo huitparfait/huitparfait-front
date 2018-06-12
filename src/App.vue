@@ -45,7 +45,7 @@
         }
     }
 
-    @media (min-width: 850px) {
+    @media (min-width: 900px) {
         .main {
             padding: 67px 5px 0 255px;
         }
@@ -70,7 +70,7 @@
         z-index: 3;
     }
 
-    @media (min-width: 850px) {
+    @media (min-width: 900px) {
         .titlebar {
             height: 50px;
             line-height: 80px;
@@ -107,7 +107,7 @@
         }
     }
 
-    @media (min-width: 850px) {
+    @media (min-width: 900px) {
         .view:after {
             display: none;
         }
@@ -134,7 +134,7 @@
         }
     }
 
-    @media (min-width: 850px) {
+    @media (min-width: 900px) {
         .menubar {
             border-top-style: none;
             border-top-width: 0;
