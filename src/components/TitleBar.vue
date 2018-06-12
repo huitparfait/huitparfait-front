@@ -65,13 +65,13 @@
         width: 30px;
     }
 
-    @media (min-width: 850px) {
+    @media (min-width: 900px) {
         .icon {
             display: block;
         }
     }
 
-    @media (min-width: 850px) {
+    @media (min-width: 900px) {
         .huit {
             display: none;
         }

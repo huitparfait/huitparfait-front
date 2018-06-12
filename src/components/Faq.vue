@@ -205,7 +205,7 @@
         overflow: visible;
     }
 
-    @media (min-width: 850px) {
+    @media (min-width: 900px) {
         .welcomeAndLogin {
             flex-wrap: nowrap;
         }
