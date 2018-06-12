@@ -58,12 +58,12 @@
                     <td class="scorePoints">3 pts</td>
                 </tr>
                 <tr>
-                    <td>Nombre de buts de l'équipe A trouvé (hors <abbr title="Tirs Aux Buts">T.A.B.</abbr>)
+                    <td>Nombre de buts de l'équipe A trouvé (hors tirs au but)
                     </td>
                     <td class="scorePoints">1 pt</td>
                 </tr>
                 <tr>
-                    <td>Nombre de buts de l'équipe B trouvé (hors <abbr title="Tirs Aux Buts">T.A.B.</abbr>)
+                    <td>Nombre de buts de l'équipe B trouvé (hors tirs au but)
                     </td>
                     <td class="scorePoints">1 pt</td>
                 </tr>
