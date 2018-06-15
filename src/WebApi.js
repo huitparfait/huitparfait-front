@@ -4,6 +4,10 @@ import cookie from 'cookie'
 
 const fetch = fetchPonyfill()
 
+export function fetchUserCount() {
+    return execute('/users/count')
+}
+
 export function fetchCurrentUser() {
     return execute('/users/me')
 }
