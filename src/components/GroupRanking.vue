@@ -3,7 +3,7 @@
     <div class="page--groupRanking">
 
         <card-title v-if="group != null && group.id != 'general'">Classement de <em>{{ group.name }}</em></card-title>
-        <card-title v-else><em>Classement général</em></card-title>
+        <card-title v-else><em>Classement général - {{ userCount }} joueurs</em></card-title>
 
         <ranked-player v-for="rankedPlayer in groupRanking.ranking" :ranked-player="rankedPlayer"></ranked-player>
 
@@ -35,6 +35,7 @@
     import store from '../state/configureStore'
     import { fetchGroup } from '../state/actions/groups'
     import { fetchGroupRanking } from '../state/actions/ranking'
+    import { fetchUserCount } from '../state/actions/user'
 
     export default {
         components: {
@@ -44,6 +45,7 @@
             return {
                 group: this.$select('group'),
                 groupRanking: this.$select('groupRanking'),
+                userCount: this.$select('userCount'),
                 loaders: this.$select('loaders'),
             }
         },
@@ -51,6 +53,7 @@
             data: ({ to: { params: { groupId }, query: { page = 1 } } }) => {
                 store.dispatch(fetchGroup(groupId))
                 store.dispatch(fetchGroupRanking(groupId, parseInt(page)))
+                store.dispatch(fetchUserCount())
             },
         },
     }
