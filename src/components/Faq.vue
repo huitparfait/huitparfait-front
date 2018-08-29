@@ -17,15 +17,22 @@
                     <li>... et amusez vous bien ;-)</li>
                 </ol>
             </card>
-            <card class="card--login" v-if="user == null">
-                <h2 class="card-title">Connexion</h2>
+            <!--<card class="card&#45;&#45;login" v-if="user == null">-->
+                <!--<h2 class="card-title">Connexion</h2>-->
+                <!--<p>-->
+                    <!--Pour vous éviter de créer un n-ième mot de passe, la connexion se fait avec un site externe.-->
+                <!--</p>-->
+                <!--<p class="card&#45;&#45;login-allBtn">-->
+                    <!--<a class="loginBtn loginBtn&#45;&#45;facebook" href="/auth/facebook">avec Facebook</a>-->
+                    <!--<a class="loginBtn loginBtn&#45;&#45;google" href="/auth/google">avec Google</a>-->
+                    <!--<a class="loginBtn loginBtn&#45;&#45;twitter" href="/auth/twitter">avec Twitter</a>-->
+                <!--</p>-->
+            <!--</card>-->
+            <card>
+                <h2 class="card-title">Huit Parfait reviendra !</h2>
                 <p>
-                    Pour vous éviter de créer un n-ième mot de passe, la connexion se fait avec un site externe.
-                </p>
-                <p class="card--login-allBtn">
-                    <a class="loginBtn loginBtn--facebook" href="/auth/facebook">avec Facebook</a>
-                    <a class="loginBtn loginBtn--google" href="/auth/google">avec Google</a>
-                    <a class="loginBtn loginBtn--twitter" href="/auth/twitter">avec Twitter</a>
+                    Pour l'instant, il n'y a pas de coupe du monde ni d'euro du coup Huit Parfait est en vacances.
+                    Il reviendra sûrement pour la coupe du monde féminine de foot en 2019.
                 </p>
             </card>
         </card-list>
